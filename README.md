@@ -5,7 +5,7 @@
 ## Get temp and rain data by name and year
 
 ```html
-<p style="color:orange;font-style:bold">GET /api/tempNRainDataByNameAndYear/:PVName/:year</p>
+<p style="color:orange;">GET /api/tempNRainDataByNameAndYear/:PVName/:year</p>
 ```
 
 ## Get temp and rain data by name, year and month
