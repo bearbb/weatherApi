@@ -76,7 +76,11 @@ POST /api/addRainData/:PVName
 ## Update temp or rain amount data for a year
 
 ```html
-POST /api/updateTempData/:PVName POST /api/updateRainData/:PVName
+POST /api/updateTempData/:PVName
+```
+
+```html
+POST /api/updateRainData/:PVName
 ```
 
 ### Data structure
@@ -93,6 +97,9 @@ POST /api/updateTempData/:PVName POST /api/updateRainData/:PVName
 ## Delete temp or rain amount data for a year
 
 ```html
-DELETE /api/deleteTempData/:PVName/:year DELETE
-/api/deleteRainData/:PVName/:year
+DELETE /api/deleteTempData/:PVName/:year
+```
+
+```html
+DELETE /api/deleteRainData/:PVName/:year
 ```
