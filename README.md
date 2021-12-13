@@ -4,11 +4,15 @@
 
 ## Get temp and rain data by name and year
 
-GET /api/tempNRainDataByNameAndYear/:PVName/:year
+```diff
+@@ GET /api/tempNRainDataByNameAndYear/:PVName/:year
+```
 
 ## Get temp and rain data by name, year and month
 
-GET /api/tempNRainPrecise/:PVName/:year/:month
+```diff
+@@ GET /api/tempNRainPrecise/:PVName/:year/:month
+```
 
 > Example: get temp and rain amount of BaRia in 2014 on JAN
 > GET /api/tempNRainPrecise/BaRia/2014/JAN
@@ -17,7 +21,9 @@ GET /api/tempNRainPrecise/:PVName/:year/:month
 
 ## Add temp data for a year
 
-POST /api/addTempData/:PVName
+```diff
+@@ POST /api/addTempData/:PVName
+```
 
 ### Data structure:
 
@@ -42,7 +48,9 @@ POST /api/addTempData/:PVName
 
 ## Add rain amount data for a year
 
-POST /api/addRainData/:PVName
+```diff
+@@ POST /api/addRainData/:PVName
+```
 
 ### Data structure:
 
@@ -67,9 +75,11 @@ POST /api/addRainData/:PVName
 
 ## Update temp or rain amount data for a year
 
-POST /api/updateTempData/:PVName
+```diff
+@@ POST /api/updateTempData/:PVName
 
-POST /api/updateRainData/:PVName
+@@ POST /api/updateRainData/:PVName
+```
 
 ### Data structure
 
@@ -84,6 +94,8 @@ POST /api/updateRainData/:PVName
 
 ## Delete temp or rain amount data for a year
 
-DELETE /api/deleteTempData/:PVName/:year
+```diff
+@@ DELETE /api/deleteTempData/:PVName/:year
 
-DELETE /api/deleteRainData/:PVName/:year
+@@ DELETE /api/deleteRainData/:PVName/:year
+```
