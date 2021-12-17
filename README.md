@@ -17,6 +17,13 @@ GET /api/tempNRainPrecise/:PVName/:year/:month
 > Example: get temp and rain amount of BaRia in 2014 on JAN
 > GET /api/tempNRainPrecise/BaRia/2014/JAN
 
+## Get temp or rain data by name and year
+
+```html
+GET /api/getTempDataByNameAndYear/:PVName/:year GET
+/api/getRainDataByNameAndYear/:PVName/:year
+```
+
 ## Those api below need to be moderator role
 
 ## Add temp data for a year

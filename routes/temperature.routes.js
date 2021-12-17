@@ -46,6 +46,47 @@ module.exports = function (app) {
     }
   );
 
+  //get rain amount by name and year
+  app.get(
+    "/api/getRainDataByNameAndYear/:PVName/:year",
+    [authJwt.verifyToken],
+    async (req, res) => {
+      try {
+        let queryData = await db[`${req.params.PVName}`].find({
+          YEAR: req.params.year,
+          PARAMETER: "RH2M",
+        });
+        if (queryData[0] == undefined) {
+          res.status(400).json({ msg: "Data not found" });
+        } else {
+          res.status(200).json({ ...queryData });
+        }
+      } catch (error) {
+        res.status(500).json({ msg: "Something went wrong" });
+      }
+    }
+  );
+  //get temp by name and year
+  app.get(
+    "/api/getTempDataByNameAndYear/:PVName/:year",
+    [authJwt.verifyToken],
+    async (req, res) => {
+      try {
+        let queryData = await db[`${req.params.PVName}`].find({
+          YEAR: req.params.year,
+          PARAMETER: "T2M",
+        });
+        if (queryData[0] == undefined) {
+          res.status(400).json({ msg: "Data not found" });
+        } else {
+          res.status(200).json({ ...queryData });
+        }
+      } catch (error) {
+        res.status(500).json({ msg: "Something went wrong" });
+      }
+    }
+  );
+
   //add new data for temp
   app.post(
     "/api/addTempData/:PVName",
